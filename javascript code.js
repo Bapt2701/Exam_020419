@@ -10,8 +10,8 @@ var b = parseInt(prompt("Enter second number", 0))
     	alert (a)
   	}
 
-	else (a < b )
-		{
+	else 
+ 	{
     	alert(b)
   	}
 
