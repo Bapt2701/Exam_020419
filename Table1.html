@@ -1,0 +1,57 @@
+<html>
+        <head>
+                <title>My table</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                
+        </head>
+            <body>
+                    
+                <hr>
+                    <form onsubmit="printDetails()" id="myForm">
+                <table style="width:25%">
+                    <tr>
+                        <p>Name: <input type="text" id="ninput"/></p>
+                        <p>Age: <input type="text" id="ainput"/></p>
+                        <p>Birth date:  <input type="date" id="bdinput"/></p>
+                    </tr>
+                </table>
+                    <button type="submit">Print</button> <br>
+                    </form>
+
+             
+                </body>
+
+        <script>
+            function fillData()
+            {
+                
+                var p = {
+                    firstName : 'Baptiste',
+                    lastNameage : '25',
+                    bDay : '27-01-1994',
+                    
+                 
+                }
+                $('#ninput').val(p.name)  
+                $('#ainput').val(p.age)
+                $('#bdinput').val(p.bDay)
+                
+               
+            }
+            function printDetails()
+            {
+                var person = {
+                    name : $('#ninput').val(),
+                    age : $('#ainput').val(),
+                    bDay : $('#bdinput').val(),
+                    
+                }
+                alertPerson( person )
+            }
+            function alertPerson(person)
+            {
+                alert (`Name : ${person.name}\nAge : ${person.age}\nBirthdate : ${person.bDay}`);
+            }
+                                                      
+        </script>
+</html>
